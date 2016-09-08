@@ -5,6 +5,7 @@ $(document).ready(function () {
   var DATA = [];
   getData();
 
+  // FILTER
   $('form').submit(function (ev) {
     ev.preventDefault();
     // console.log(ev.target[0].value);
@@ -26,8 +27,10 @@ $(document).ready(function () {
   // push to DOM by appending
 
   function pushToDOM (incomingData, filter) {
+    $('#card-stage').attr('style', 'display: none');
     if (filter) {
       $('#card-stage').empty();
+      $('#card-stage').attr('style', 'display: none');
 
       for (var i = 0; i < incomingData.length; i++) {
         var card = $('<div>');
@@ -75,6 +78,7 @@ $(document).ready(function () {
         $('#card-stage').append(card);
       }
     }
+    $('#card-stage').fadeIn(600);
   }
 
   function getData () {
