@@ -1,3 +1,3 @@
 # go-where-park-api
 
-!(screenshot)['screenshot.png']
+![screenshot](screenshot.png)
